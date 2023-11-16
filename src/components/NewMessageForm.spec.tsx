@@ -14,7 +14,9 @@ describe("<NewMessageForm />", () => {
 
     it("clears the text field", async () => {
       await sendMessage();
-      expect(screen.getByTestId("messageText").value).toEqual("");
+      expect(
+        (screen.getByTestId("messageText") as HTMLInputElement).value
+      ).toEqual("");
     });
   });
 });
